@@ -123,20 +123,23 @@ const wordsCount = [
   'truth',
   'disobedience',
   'matter'
-]; //????
-//
-//
-/*function howManyTimes(wordsCount) {
-    let newArr = []
-  for(let i= 0; i< wordsCount.length; i++)
-    
-    if(wordsCount[i].includes) {
-      return newArr.push(wordsCount[i])
-    } else {
-      return null
-    }
-} console.log(howManyTimes(wordsCount)) */
+];
 
+function howManyTimes(wordsCount) {
+  let count = [];
+  
+  for(let i=0; i < wordsCount.length; i++) {
+    if (count[wordsCount[i]]) {
+      count[wordsCount[i]] += 1
+    } else {
+      count[wordsCount[i]] = 1
+    }
+  }
+
+  return count
+}
+
+console.log(howManyTimes(wordsCount))
 // Iteration #8: Bonus
 
 const matrix = [
