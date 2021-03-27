@@ -5,7 +5,7 @@ function maxOfTwoNumbers(numberOne, numberTwo) {
   } else if (numberOne < numberTwo) {
     return numberTwo
   } else {
-    return 'Same value'
+    return numberOne||numberTwo
   }
 }
 console.log(maxOfTwoNumbers(3,3));
@@ -101,7 +101,7 @@ function doesWordExist(wordsFind) {
     if(!newArr.includes(wordsFind[i])) {
       newArr.push(wordsFind[i])
 
-    } else if (newArr.unshift(wordsFind[i])) { // --> no point  of using this statement. Just wanted to be fancier lol
+    } else {
       return false;
     } 
   } return true;
